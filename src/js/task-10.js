@@ -16,7 +16,7 @@ const createBoxes = (amount) => {
   box.style.height = `${size + amount * 10}px`;
   box.style.background = getRandomHexColor();
   box.style.display = "flex";
-  
+
   boxes.append(box);
 };
 
@@ -27,7 +27,6 @@ const destroyBoxes = () => {
 
 create.addEventListener("click", () => {
   const inputValue = document.querySelector("input").value;
-  console.log(inputValue);
 
   for (let i = 1; i <= inputValue; i++) {
     createBoxes(i);
