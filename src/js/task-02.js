@@ -11,12 +11,16 @@ const body = document.body;
 
 const list = body.querySelector('#ingredients');
 
+const tableOfItems = [];
+
 ingredients.forEach(element => {
   const item = document.createElement('li');
   item.classList.add("item")
   item.textContent = element;
 
-  list.append(item);
+  tableOfItems.push(item);
 })
+
+list.append(...tableOfItems);
 
 console.log(list);

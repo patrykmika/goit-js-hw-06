@@ -17,6 +17,8 @@ const body = document.body;
 
 const gallery = body.querySelector(".gallery");
 
+const tableOfImages = [];
+
 images.forEach((image) => {
   const imageHtml = document.createElement("li");
 
@@ -24,8 +26,10 @@ images.forEach((image) => {
 
   imageHtml.insertAdjacentHTML("afterbegin", tagImg);
 
-  gallery.append(imageHtml);
+  tableOfImages.push(imageHtml);
 });
+
+gallery.append(...tableOfImages);
 
 gallery.style.display = 'grid';
 gallery.style.gridTemplateColumns = 'repeat(3, 1fr)';
